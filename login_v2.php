@@ -64,7 +64,7 @@ if($session->isUserLoggedIn(true)) { redirect('home.php', false);}
         </div>
 
         <div class="w-full text-center">
-          <a href="#" class="txt3">
+          <a href="sing_up.php" class="txt3">
             Sign Up
           </a>
         </div>

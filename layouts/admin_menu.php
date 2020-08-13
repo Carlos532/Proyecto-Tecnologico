@@ -65,7 +65,7 @@
 <li>
   <!-------------------- CALENDARIO ------------------------------------>
   <li>
-    <a href="calendario.php">
+    <a href="calendar.php">
       <i class="glyphicon glyphicon-calendar"></i>
       <span>Calendar</span>
     </a>

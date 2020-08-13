@@ -1,35 +1,39 @@
 <!------------------------------------ CODIGO PHP ------------------------------------->
 <?php
   $page_title = 'Add users';
-  if(isset($_POST["registrar"])){
+  //Registrarse***********************************
+if(isset($_POST["registrar"])){
     //mysqli_real_escape_string, funcion que no permite o evita inyecciones SQL por medio de formularios.
-  $nombre = mysqli_real_escape_string($conexion,$_POST['nombre']);
-  $usuario = mysqli_real_escape_string($conexion,$_POST['usuario']);
-  $correo = mysqli_real_escape_string($conexion,$_POST['email']);
-  //$tipo = ($conexion,$_POST['radio']);
-  $password = mysqli_real_escape_string($conexion,$_POST['password']);
+    $nombre = mysqli_real_escape_string($conexion,$_POST['nombre']);
+    $correo = mysqli_real_escape_string($conexion,$_POST['correo']);
+    $usuario = mysqli_real_escape_string($conexion,$_POST['user']);
+    $password = mysqli_real_escape_string($conexion,$_POST['pass']);
     $password_encriptada = sha1($password);//encriptamos la variable
-    $sqluser = "SELECT id_usuarios FROM usuario WHERE nombre_completo = '$nombre'";//seleccionamos todos los campos que tenemos en nuestra tabla usuarios.
+    $sqluser = "SELECT idusuarios FROM usuarios WHERE usuario = '$usuario'";//seleccionamos todos los campos que tenemos en nuestra tabla usuarios.
     $resultadouser = $conexion-> query($sqluser);
     $filas = $resultadouser->num_rows;//funcion para contar los registros.
     if($filas > 0 ){//verificamos si el usuario ya existe. si existe nos redirecciona a nuestro index.php
-      echo "<script>
-      alert('El Usuario ya existe'); 
-      windows.location = 'Registro_usuarios.php' 
-      </script>";
-    }else{
-      $sqlusuario = "INSERT INTO usuario(nombre_completo,usuario,correo_electronico,password,tipo_usuario) VALUES('$nombre', '$usuario' , '$correo', '$password_encriptada', 'administrador')";
-      $resultadousuario = $conexion->query($sqlusuario);
-      if($resultadousuario > 0 ){
-        echo "<script> alert('Registro Exitoso');
-        windows.location = 'Inicio_de_sesion.php'
+        echo "<script>
+        alert('El Usuario ya existe'); 
+        windows.location = 'index.php' 
         </script>";
-      }else{
-        echo "<script> 
-        alert('Eror al registrarse');
-        windows.location = 'Registrar_nuevo_usuario.php'
-        </script>";
-      }
+    }else{//si no existe hace la insercion
+        //omsertar informacion, ojo debemos insertar la contra encriptada
+        $sqlusuario = "INSERT INTO usuarios(Nombre,Correo,usuario,password) VALUES('$nombre', '$correo', '$usuario', '$password_encriptada')";
+        $resultadousuario = $conexion->query($sqlusuario);
+        if($resultadousuario > 0 ){
+            echo "<script> alert('Registro Exitoso');
+            windows.location = 'index.php'
+            </script>";
+        }else{
+            echo "<script> 
+            alert('Eror al registrarse');
+            windows.location = 'index.php'
+            </script>";
+        }
+        
+    }
+}
 ?>
   <?php echo display_msg($msg); ?>
 <header>
@@ -60,7 +64,7 @@
 <div class="limiter">
   <div class="container-login100">
     <div class="wrap-login100">
-      <form class="login100-form validate-form" action="auth_v2.php" method="post">
+      <form class="login100-form validate-form" action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
         <span class="login100-form-title p-b-34">
           Account Login
         </span>
@@ -81,7 +85,7 @@
         </div>
 
         <div class="container-login100-form-btn">
-          <button class="login100-form-btn">
+          <button class="login100-form-btn" id="registrar">
             Sign Up
           </button>
         </div>
@@ -131,4 +135,3 @@
 <script src="libs/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 <script src="libs/js/main_login.js"></script>
-

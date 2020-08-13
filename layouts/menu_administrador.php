@@ -64,12 +64,12 @@
 </li>
 <li>
   <!-------------------- CALENDARIO ------------------------------------>
- <!-- <li>
+ <li>
     <a href="calendario.php">
       <i class="glyphicon glyphicon-calendar"></i>
       <span>Calendario</span>
     </a>
-  </li>-->
+  </li>
 <!--------------------------- CARRITO DE COMPRA ----------------------------------------->
 <li>
   <a href="chat.php" >

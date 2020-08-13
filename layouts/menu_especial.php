@@ -47,4 +47,11 @@
     <span>Media</span>
   </a>
 </li>
+  <!-------------------- CALENDARIO ------------------------------------>
+ <li>
+    <a href="calendario.php">
+      <i class="glyphicon glyphicon-calendar"></i>
+      <span>Calendario</span>
+    </a>
+  </li>
 </ul>
