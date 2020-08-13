@@ -17,7 +17,7 @@
             <a href="about_us2.php">About us</a>
             <a href="services2.php">Services</a>
             <a href="language2.php">Language</a>
-            <a href="Login.php">Login</a>
+            <a href="login_v2.php">Login</a>
         </nav>
         <div class="textos">
             <h1 class="titulo">Jaibita's Racing El Salvador</h1>
@@ -34,7 +34,6 @@
                 <h3 class="slogan">History</h3>
                 <p class="parrafo">Jaibita's Racing is structured based on the company Pinturas Orellana, the quality begins thanks to the passion and creativity that Pedro Orellana, head of that company. This idea was born in 2017 due to the unemployment of its creator, after a few months of its elaboration it is launched at the service of its community on April of the same year.</p>
                 <p class="parrafo">Jaibita’s Racing is a nationwide automotive product and service sales company, which has highly trained personnel willing to do their best.</p>
-                <a href="#" class="boton">Would you like to be part of our work team?</a>
             </div>
         </section>
         <!---------------------------------------- CODIGO DE GALERIA ------------------------------------------------------------------>

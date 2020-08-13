@@ -73,7 +73,7 @@
        <div class="panel-heading">
          <strong>
            <span class="glyphicon glyphicon-th"></span>
-           <span>Most selled products</span>
+           <span>Most sold products</span>
          </strong>
        </div>
        <div class="panel-body">

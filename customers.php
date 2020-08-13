@@ -1,32 +1,16 @@
 <!---------------------------------- CODIGO PHP ----------------------------------------->
 <?php
-$page_title = 'Customers';
-  require_once('includes/load.php');//INCLUYE LOAD
-  if (!$session->isUserLoggedIn(true)) { redirect('inicio_sesion.php', false);}//VERIFICA SI LA SESION EXISTE
-  ?>
-
+  $page_title = 'Customers';
+  require_once('includes/load.php');
+  // Checkin What level user has permission to view this page
+   page_require_level(2);
+  $products = join_product_table();
+?>
   <?php include_once('layouts/header.php');//INCLUYE EL INICIO DE PAGINA ?>
 
   <?php
   include("includes/conexion.php");
   ?>
-  <!DOCTYPE html>
-  <html lang="es">
-  <head>
-
-  	<meta charset="utf-8">
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-  	<!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
-    <style>
-      .content {
-       margin-top: 80px;
-     }
-   </style>
-
  </head>
  <body>
    <div class="row">
@@ -63,8 +47,8 @@ $page_title = 'Customers';
     <select name="filter" class="form-control" onchange="form.submit()">
      <option value="0">Customer data filters</option>
      <?php $filter = (isset($_GET['filter']) ? strtolower($_GET['filter']) : NULL);  ?>
-     <option value="1" <?php if($filter == 'Tetap'){ echo 'selected'; } ?>>Subscribed</option>
-     <option value="2" <?php if($filter == 'Kontrak'){ echo 'selected'; } ?>>Unsubscribed</option>
+     <option value="1" <?php if($filter == 'Tetap'){ echo 'selected'; } ?>>Registered</option>
+     <option value="2" <?php if($filter == 'Kontrak'){ echo 'selected'; } ?>>Not registered</option>
    </select>
  </div>
 </form>
@@ -102,16 +86,15 @@ $page_title = 'Customers';
     <td class="text-center">'.$row['direccion'].'</td>
         <td class="text-center">';
     if($row['estado'] == '1'){
-     echo '<span class="label label-success">Subscribed</span>';
+     echo '<span class="label label-success">Registered</span>';
    }
    else if ($row['estado'] == '2' ){
-     echo '<span class="label label-info">Unsubscribed</span>';
+     echo '<span class="label label-info">Not registered</span>';
    }
    echo '
    </td>
    <td class="text-center">
 
-   <a href="editar_cliente.php?nik='.$row['dui'].'" title="Edit data" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
    <a href="customers.php?aksi=delete&nik='.$row['dui'].'" title="Remove" onclick="return confirm(\'Are you sure to delete the data '.$row['nombres'].'?\')" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
    </td>
    </tr>
@@ -130,37 +113,6 @@ $page_title = 'Customers';
 </center>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="libs/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-  function AlertaEliminacion(){
-    Swal.fire({
-      title: '¿Estas seguro de eliminar los datos?',
-      text: "¡No podras recuperar esta información!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Eliminar'
-    }).then((result) => {
-      if (result.value) {
-        Swal.fire(
-          '¡Datos eliminados!',
-          '¡Sus datos han sido eliminados exitosamente!',
-          'success'
-          )
-      }
-    })
-
-    function Success(){
-      Swal.fire({
-        position: 'top-end',
-        icon: '¡Datos eliminados!',
-        title: '¡Sus datos han sido eliminados exitosamente!',
-        showConfirmButton: false,
-        timer: 1500
-      })
-    }
-  }
-</script>
 </body>
 </html>
 <!--<a href="edit_empleado.php?nik='.$row['codigo'].'" title="Editar datos" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>-->

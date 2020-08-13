@@ -9,22 +9,6 @@ $page_title = 'Registry';
   <?php
   include("includes/conexion.php");
   ?>
-  <!DOCTYPE html>
-  <html lang="es">
-  <head>
-
-  	<meta charset="utf-8">
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-  	<!-- Bootstrap -->
-  	<link href="libs/css/bootstrap-datepicker.css" rel="stylesheet">
-  	<style>
-  		.content {
-  			margin-top: 80px;
-  		}
-  	</style>
-</head>
 <body>
 	<?php
 	if(isset($_POST['add'])){
@@ -67,26 +51,26 @@ $page_title = 'Registry';
 								</div>
 								<div class="form-group">
 									<label for="name">Name</label>				
-									<input type="text" name="nombres" class="form-control" placeholder="Nombre Completo" required>
+									<input type="text" name="nombres" class="form-control" placeholder="Name" required>
 								</div>
 								<div class="form-group">
 									<label for="telefono">Telephone</label>
-									<input type="text" name="telefono" class="form-control" placeholder="Teléfono" required>
+									<input type="text" name="telefono" class="form-control" placeholder="Telephone" required>
 								</div>
 								<div class="form-group">
 									<label for="fecha_nacimiento">Email</label>
-									<input type="text" name="email" class="input-group date form-control" date="" data-date-format="dd-mm-yyyy" placeholder="Correo Electronico" required>
+									<input type="text" name="email" class="input-group date form-control" date="" data-date-format="dd-mm-yyyy" placeholder="Email" required>
 								</div>
 								<div class="form-group">
 									<label for="direccion">Address</label>
-									<textarea name="direccion" class="form-control" placeholder="Dirección"></textarea>
+									<textarea name="direccion" class="form-control" placeholder="Address"></textarea>
 								</div>			
 								<div class="form-group">
 										<label for="estado">State</label>
 											<select name="estado" class="form-control">
 												<option value=""> ----- </option>
-												<option value="1">Subscribed</option>
-												<option value="2">Unsubscribed</option>
+												<option value="1">Registered</option>
+												<option value="2">Not registered</option>
 											</select>
 									</div>						
 								<div class="form-group">

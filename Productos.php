@@ -28,7 +28,6 @@
                 <th class="text-center" style="width: 10%;"> Stock </th>
                 <th class="text-center" style="width: 10%;"> Precio de compra </th>
                 <th class="text-center" style="width: 10%;"> Precio de venta </th>
-                <th class="text-center" style="width: 10%;"> Agregado </th>
                 <th class="text-center" style="width: 100px;"> Acciones </th>
               </tr>
             </thead>
@@ -48,7 +47,6 @@
                 <td class="text-center"> <?php echo remove_junk($product['quantity']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['buy_price']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['sale_price']); ?></td>
-                <td class="text-center"> <?php echo read_date($product['date']); ?></td>
                 <td class="text-center">
                   <div class="btn-group">
                     <a href="editar_producto.php?id=<?php echo (int)$product['id'];?>" class="btn btn-warning btn-xs"  title="Editar" data-toggle="tooltip">

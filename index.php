@@ -77,26 +77,6 @@
                 </div>
             </div>
         </section>
-        <!------------------------------------ CODIGO SOBRE NUESTROS JEFES --------------------------------------------------------------------->
-        <section class="clientes contenedor">
-            <h2 class="titulo">¿Qué dicen nuestros clientes?</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="libs/images/create-your-cartoon-style-flat-avatar-or-icon.jpg" alt="">
-                    <div class="contenido-texto-card">
-                        <h4>Nombre</h4>
-                        <p>dmasfdijfdsfiodsfufsfdsfjkfjkadskjfdsljfkldsjfkldsjfkdsjfkldsjflkdsjlf</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="libs/images/97305655-avatar-icon-of-girl-in-a-wide-brim-felt-hat.jpg" alt="">
-                    <div class="contenido-texto-card">
-                        <h4>Nombre</h4>
-                        <p>dmasfdijfdsfiodsfufsfdsfjkfjkadskjfdsljfkldsjfkldsjfkdsjfkldsjflkdsjlf</p>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-------------------------------------- CODIGO SOBRE NUESTROS VALORES ------------------------------------------------------------->
         <section class="about-services">
             <div class="contenedor">

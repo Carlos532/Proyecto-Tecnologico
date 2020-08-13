@@ -23,12 +23,11 @@
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
                 <th> Image</th>
-                <th> Descripción </th>
+                <th> Description </th>
                 <th class="text-center" style="width: 10%;"> Category </th>
                 <th class="text-center" style="width: 10%;"> Stock </th>
                 <th class="text-center" style="width: 10%;"> Purchase price </th>
                 <th class="text-center" style="width: 10%;"> Sale price </th>
-                <th class="text-center" style="width: 10%;"> Aggregate </th>
                 <th class="text-center" style="width: 100px;"> Actions </th>
               </tr>
             </thead>
@@ -48,7 +47,6 @@
                 <td class="text-center"> <?php echo remove_junk($product['quantity']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['buy_price']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['sale_price']); ?></td>
-                <td class="text-center"> <?php echo read_date($product['date']); ?></td>
                 <td class="text-center">
                   <div class="btn-group">
                     <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-warning btn-xs"  title="Edit" data-toggle="tooltip">

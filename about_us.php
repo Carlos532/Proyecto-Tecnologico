@@ -29,7 +29,6 @@ $page_title = 'About us';//TITULO DE LA PAGINA
                 <h3 class="slogan">History</h3>
                 <p class="parrafo">Jaibita's Racing is structured based on the company Pinturas Orellana, the quality begins thanks to the passion and creativity that Pedro Orellana, head of that company. This idea was born in 2017 due to the unemployment of its creator, after a few months of its elaboration it is launched at the service of its community on April of the same year.</p>
                 <p class="parrafo">Jaibita’s Racing is a nationwide automotive product and service sales company, which has highly trained personnel willing to do their best.</p>
-                <a href="bolsa_empleo.php" class="boton">Would you like to be part of our work team?</a>
             </div>
         </section>
 <!------------------------------------------ CODIGO DE GALERIA -------------------------------------------------------------------------------->

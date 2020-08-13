@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Client Menu</title>
+    <title>Main Menu</title>
     <!--Poner icono en parte superior de pestana-->
     <link rel="shortcut icon" href="libs/images/Logo.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="libs/css/estilo_menuclientes.css">
@@ -16,7 +16,7 @@
             <a href="about_us2.php">About us</a>
             <a href="services2.php">Services</a>
             <a href="language2.php">Language</a>
-            <a href="Login.php">Login</a>
+            <a href="login_v2.php">Login</a>
         </nav>
         <section class="textos-header">
             <h1>Welcome to Jaibita's Racing El Salvador</h1>
@@ -72,26 +72,6 @@
                             <img src="libs/images/comercio-electronico.png" alt="">
                             <p>Accessories</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!------------------------------------ CODIGO SOBRE NUESTROS JEFES --------------------------------------------------------------------->        
-        <section class="clientes contenedor">
-            <h2 class="titulo">What do our bosses say?</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="libs/images/create-your-cartoon-style-flat-avatar-or-icon.jpg" alt="">
-                    <div class="contenido-texto-card">
-                        <h4>Nombre</h4>
-                        <p>dmasfdijfdsfiodsfufsfdsfjkfjkadskjfdsljfkldsjfkldsjfkdsjfkldsjflkdsjlf</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="libs/images/97305655-avatar-icon-of-girl-in-a-wide-brim-felt-hat.jpg" alt="">
-                    <div class="contenido-texto-card">
-                        <h4>Nombre</h4>
-                        <p>dmasfdijfdsfiodsfufsfdsfjkfjkadskjfdsljfkldsjfkldsjfkdsjfkldsjflkdsjlf</p>
                     </div>
                 </div>
             </div>

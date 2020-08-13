@@ -66,15 +66,15 @@ $page_title = 'Add employees';
 							<form action="" method="post">
 								<div class="form-group">
 									<label for="name">Code</label>
-									<input type="text" class="form-control" name="codigo" placeholder="Código" required>
+									<input type="text" class="form-control" name="codigo" placeholder="Code" required>
 									</div>
 									<div class="form-group">
 										<label for="name">Name</label>				
-										<input type="text" name="nombres" class="form-control" placeholder="Nombre Completo" required>
+										<input type="text" name="nombres" class="form-control" placeholder="Name" required>
 									</div>
 									<div class="form-group">
 										<label for="name">Place of birth</label>
-											<input type="text" name="lugar_nacimiento" class="form-control" placeholder="Lugar de nacimiento" required>
+											<input type="text" name="lugar_nacimiento" class="form-control" placeholder="Place of birth" required>
 									</div>
 									<div class="form-group">
 										<label for="fecha_nacimiento">Date of birth</label>
@@ -82,15 +82,15 @@ $page_title = 'Add employees';
 									</div>
 									<div class="form-group">
 										<label for="direccion">Address</label>
-											<textarea name="direccion" class="form-control" placeholder="Dirección"></textarea>
+											<textarea name="direccion" class="form-control" placeholder="Address"></textarea>
 									</div>
 									<div class="form-group">
 										<label for="telefono">Telephone</label>
-											<input type="text" name="telefono" class="form-control" placeholder="Teléfono" required>
+											<input type="text" name="Telephone" class="form-control" placeholder="Telephone" required>
 									</div>
 									<div class="form-group">
 										<label for="name">Position</label>
-											<input type="text" name="puesto" class="form-control" placeholder="Puesto" required>
+											<input type="text" name="puesto" class="form-control" placeholder="Position" required>
 									</div>
 									<div class="form-group">
 										<label for="estado">State</label>

@@ -18,7 +18,7 @@
             <a href="about_us2.php">About us</a>
             <a href="services2.php">Services</a>
             <a href="language2.php">Language</a>
-            <a href="Login.php">Login</a>
+            <a href="login_v2.php">Login</a>
         </nav>
         <div class="textos">
             <h1 class="titulo">Jaibita's Racing El Salvador</h1>
@@ -88,7 +88,7 @@
     
     <script>
         function Mensaje() {
-            Swal.fire('This option is only enabled for subscribed clients, please subscribe to our website')
+            Swal.fire('This option is only enabled for register clients, please register to our website')
         }
     </script>
 </body>

@@ -1,47 +1,14 @@
 <!---------------------------------- CODIGO PHP ----------------------------------------->
 <?php
-$page_title = 'Manage forms';
-  require_once('includes/load.php');//INCLUYE LOAD
-  if (!$session->isUserLoggedIn(true)) { redirect('inicio_sesion.php', false);}//VERIFICA SI LA SESION EXISTE
-  ?>
-
-  <?php include_once('layouts/header.php');//INCLUYE EL INICIO DE PAGINA ?>
-
-  <?php
+  $page_title = 'Manage forms';
+  require_once('includes/load.php');
   include("includes/conexion.php");
-  ?>
-  <!DOCTYPE html>
-  <html lang="es">
-  <head>
+  // Checkin What level user has permission to view this page
+   page_require_level(2);
+  $products = join_product_table();
 
-  	<meta charset="utf-8">
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-  	<!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
-    <style>
-      .content {
-       margin-top: 80px;
-     }
-   </style>
-
- </head>
- <body>
-   <div class="row">
-    <div class="col-md-12">
-     <div class="panel panel-default">
-      <div class="panel-heading clearfix">
-       <strong>
-        <span class="glyphicon glyphicon-th-list"></span>
-        <span>Forms</span>
-      </strong>
-    </div>
-
-    <?php
-    if(isset($_GET['aksi']) == 'delete'){
-				// escaping, additionally removing everything that could be (html/javascript-) code
+  if(isset($_GET['aksi']) == 'delete'){
+        // escaping, additionally removing everything that could be (html/javascript-) code
      $nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
      $cek = mysqli_query($con, "SELECT * FROM formulario1 WHERE nit='$nik'");
      if(mysqli_num_rows($cek) == 0){
@@ -55,7 +22,19 @@ $page_title = 'Manage forms';
      }
    }
  }
- ?>
+?>
+  <?php include_once('layouts/header.php');//INCLUYE EL INICIO DE PAGINA ?>
+
+ <body>
+   <div class="row">
+    <div class="col-md-12">
+     <div class="panel panel-default">
+      <div class="panel-heading clearfix">
+       <strong>
+        <span class="glyphicon glyphicon-th-list"></span>
+        <span>Forms</span>
+      </strong>
+    </div>
  <br/>
  <form class="form-inline" method="get">
    <div class="form-group">
@@ -75,7 +54,7 @@ $page_title = 'Manage forms';
    <th class="text-center" style="width: 15%;">Owner's Nit</th>
    <th class="text-center" style="width: 15%;">Name</th>
    <th class="text-center" style="width: 15%;">Telephone</th>
-   <th class="text-center" style="width: 10%;">State</th>
+   <th class="text-center" style="width: 10%;">Status</th>
    <th class="text-center" style="width: 15%;">license plate number</th>
    <th class="text-center" style="width: 15%;">Brand</th>
    <th class="text-center" style="width: 15%;">Model</th>
@@ -137,37 +116,6 @@ $page_title = 'Manage forms';
 </center>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="libs/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-  function AlertaEliminacion(){
-    Swal.fire({
-      title: '¿Estas seguro de eliminar los datos?',
-      text: "¡No podras recuperar esta información!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Eliminar'
-    }).then((result) => {
-      if (result.value) {
-        Swal.fire(
-          '¡Datos eliminados!',
-          '¡Sus datos han sido eliminados exitosamente!',
-          'success'
-          )
-      }
-    })
-
-    function Success(){
-      Swal.fire({
-        position: 'top-end',
-        icon: '¡Datos eliminados!',
-        title: '¡Sus datos han sido eliminados exitosamente!',
-        showConfirmButton: false,
-        timer: 1500
-      })
-    }
-  }
-</script>
 </body>
 </html>
 <!--<a href="edit_empleado.php?nik='.$row['codigo'].'" title="Editar datos" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>-->

@@ -30,7 +30,7 @@
             <th class="text-center" style="width: 50px;">#</th>
             <th>Group name</th>
             <th class="text-center" style="width: 20%;">Group level</th>
-            <th class="text-center" style="width: 15%;">State</th>
+            <th class="text-center" style="width: 15%;">Status</th>
             <th class="text-center" style="width: 100px;">Actions</th>
           </tr>
         </thead>

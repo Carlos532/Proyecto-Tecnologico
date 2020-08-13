@@ -34,8 +34,7 @@
             <th>Name </th>
             <th>User</th>
             <th class="text-center" style="width: 15%;">User role</th>
-            <th class="text-center" style="width: 10%;">State</th>
-            <th style="width: 20%;">Last login</th>
+            <th class="text-center" style="width: 10%;">Status</th>
             <th class="text-center" style="width: 100px;">Actions</th>
           </tr>
         </thead>
@@ -53,7 +52,6 @@
             <span class="label label-danger"><?php echo "Inactive"; ?></span>
           <?php endif;?>
            </td>
-           <td><?php echo read_date($a_user['last_login'])?></td>
            <td class="text-center">
              <div class="btn-group">
                 <a href="edit_user.php?id=<?php echo (int)$a_user['id'];?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Edit">

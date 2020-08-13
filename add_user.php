@@ -25,11 +25,11 @@
         $query .=")";
         if($db->query($query)){
           //sucess
-          $session->msg('s'," Cuenta de usuario ha sido creada");
+          $session->msg('s',"User account has been created");
           redirect('add_user.php', false);
         } else {
           //failed
-          $session->msg('d',' No se pudo crear la cuenta.');
+          $session->msg('d',' Account could not be created.');
           redirect('add_user.php', false);
         }
    } else {
@@ -54,15 +54,15 @@
           <form method="post" action="add_user.php">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" name="full-name" placeholder="Nombre completo" required>
+                <input type="text" class="form-control" name="full-name" placeholder="Name" required>
             </div>
             <div class="form-group">
                 <label for="username">User</label>
-                <input type="text" class="form-control" name="username" placeholder="Nombre de usuario">
+                <input type="text" class="form-control" name="username" placeholder="User Name">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" name ="password"  placeholder="Contraseña">
+                <input type="password" class="form-control" name ="password"  placeholder="Password">
             </div>
 
               <label for="level">User role</label>

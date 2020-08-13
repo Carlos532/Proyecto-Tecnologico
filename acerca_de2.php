@@ -31,7 +31,6 @@ $page_title = 'Menú Principal';
                 <h3 class="slogan">Historia</h3>
                 <p class="parrafo">Jaibita’s Racing se estructuro en base a la empresa Pinturas Orellana, la cual nació gracias a la pasión y creatividad de Pedro Orellana, jefe de dicha empresa. Esta idea nació en el año 2017 debido a el desempleo de su creador, tras algunos meses de su elaboración esta se lanza al servicio de su comunidad en el mes de abril del mismo año.</p>
                 <p class="parrafo">Jaibita’s Racing es una empresa de ventas de productos y servicios automotriz a nivel nacional, la cual cuenta con un personal sumamente capacitado y dispuesto a dar lo mejor de sí.</p>
-                <a href="#" class="boton">¿te gustaría formar parte de nuestro equipo de trabajo?</a>
             </div>
         </section>
 <!--------------------------- CODIGO DE GALERIA -------------------------------------->

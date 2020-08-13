@@ -7,7 +7,7 @@
   </a>
 </li>
 <li>
-  <a href="main.php">
+  <a href="main_menu.php">
   <i class="glyphicon glyphicon-th-large"></i>
   <span>Main Menu<span>
   </a> 
@@ -15,20 +15,20 @@
 <li>
   <a href="services.php">
   <i class="glyphicon glyphicon-star"></i>
-  <span>Servicios<span>
+  <span>Services<span>
   </a> 
 </li>
 <li>
   <a href="about_us.php">
   <i class="glyphicon glyphicon-book"></i>
-  <span>Acerca de<span>
+  <span>About us<span>
   </a> 
 </li>
 <!--------------------------- CARRITO DE COMPRA ----------------------------------------->
-<li>
+<!--<li>
   <a href="media.php" >
     <i class="glyphicon glyphicon-shopping-cart"></i>
     <span>Carrito</span>
   </a>
-</li>
+</li>-->
 </ul>

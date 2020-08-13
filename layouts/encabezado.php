@@ -25,7 +25,8 @@
       <div class="logo pull-left"> Jaibita's Racing </div>
       <div class="header-content">
         <div class="header-date pull-left">
-          <strong><?php echo date("d/m/Y  g:i a");?></strong>
+          <strong><!--<?php
+        //echo date("d-m-Y-l  G:i a");?></strong>-->
         </div>
         <!----------------------------------- OPCIONES SOBRE PERFIL Y CERRAR SESION --------------------->
         <div class="pull-right clearfix">

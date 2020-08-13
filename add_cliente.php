@@ -9,22 +9,6 @@ $page_title = 'Add Employees';
   <?php
   include("includes/conexion.php");
   ?>
-  <!DOCTYPE html>
-  <html lang="es">
-  <head>
-
-  	<meta charset="utf-8">
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-  	<!-- Bootstrap -->
-  	<link href="libs/css/bootstrap-datepicker.css" rel="stylesheet">
-  	<style>
-  		.content {
-  			margin-top: 80px;
-  		}
-  	</style>
-</head>
 <body>
 	<?php
 	if(isset($_POST['add'])){
@@ -85,8 +69,8 @@ $page_title = 'Add Employees';
 										<label for="estado">State</label>
 											<select name="estado" class="form-control">
 												<option value=""> ----- </option>
-												<option value="1">Subscribed</option>
-												<option value="2">Unsubscribed</option>
+												<option value="1">Registered</option>
+												<option value="2">Not registered</option>
 											</select>
 									</div>						
 								<div class="form-group">

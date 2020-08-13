@@ -25,7 +25,7 @@
       <div class="logo pull-left"> Jaibita's Racing </div>
       <div class="header-content">
         <div class="header-date pull-left">
-          <strong><?php echo date("d/m/Y  g:i a");?></strong>
+        <!--  <strong><?php// echo date("d/m/Y  g:i a");?></strong>-->
         </div>
         <!----------------------------------- OPCIONES SOBRE PERFIL Y CERRAR SESION --------------------->
         <div class="pull-right clearfix">
@@ -59,7 +59,7 @@
                 </ul>
               </li>
               <li class="last">
-               <a href="logout.php">
+               <a href="logout_v2.php">
                  <i class="glyphicon glyphicon-off"></i>
                  Logout
                </a>

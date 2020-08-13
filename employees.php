@@ -1,32 +1,16 @@
 <!---------------------------------- CODIGO PHP ----------------------------------------->
 <?php
-$page_title = 'Employees';
-  require_once('includes/load.php');//INCLUYE LOAD
-  if (!$session->isUserLoggedIn(true)) { redirect('index.php', false);}//VERIFICA SI LA SESION EXISTE
-  ?>
-
+  $page_title = 'Employees';
+  require_once('includes/load.php');
+  // Checkin What level user has permission to view this page
+   page_require_level(2);
+  $products = join_product_table();
+?>
   <?php include_once('layouts/header.php');//INCLUYE EL INICIO DE PAGINA ?>
 
   <?php
   include("includes/conexion.php");
   ?>
-  <!DOCTYPE html>
-  <html lang="es">
-  <head>
-
-  	<meta charset="utf-8">
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-  	<!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
-    <style>
-      .content {
-       margin-top: 80px;
-     }
-   </style>
-
  </head>
  <body>
    <div class="row">
@@ -118,8 +102,7 @@ $page_title = 'Employees';
    echo '
    </td>
    <td>
-
-   <a href="edit_empleado.php?nik='.$row['codigo'].'" title="Editar datos" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+   
    <a href="employees.php?aksi=delete&nik='.$row['codigo'].'" title="Remove" onclick="return confirm(\'Are you sure to delete the data'.$row['nombres'].'?\')" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
    </td>
    </tr>
