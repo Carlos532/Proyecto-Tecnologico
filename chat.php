@@ -23,28 +23,23 @@ $page_title = 'Menú Principal';
 
 
 function loginForm(){
+    //<h3>Ingrese un nombre para continuar:</h3>
+    //<input type="text" class="form-control" name="name" id="name" "required" placeholder="Nombre..."/></br>
     echo'
     <div id="loginform">
     <form action="chat.php" method="post">
-    <h3>Ingrese un nombre para continuar:</h3>
-    <input type="text" class="form-control" name="name" id="name" "required" placeholder="Nombre..."/></br>
     <input type="submit" class="btn btn-success" name="enter" id="enter" value="Entrar" />
     </form>
     </div>';
 }
 
 if(isset($_POST['enter'])){
-    if($_POST['name'] != ""){
-        $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
-    }
-    else{
-        echo '<span class="error"><h5>Please type in a name</5></span>';
-    }
+        $user['name'] = stripslashes(htmlspecialchars($_POST['name']));
 }
 
 
 
-if(!isset($_SESSION['name'])){
+if(!isset($user['name'])){
     loginForm();
 }
 
@@ -53,8 +48,7 @@ else{
     ?>
     <div id="wrapper">
         <div id="menu">
-            <h6><p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p></h6>
-            <h6><p class="logout"><a id="exit" href="#">Salir del Chat</a></p></h6>
+            <h6><p class="welcome">Welcome, <b><?php echo $user['name']; ?></b></p></h6>
             <div style="clear:both"></div>
         </div>    
         <div id="chatbox"> 
@@ -125,7 +119,7 @@ if(isset($_GET['logout'])){
 
     //Simple exit message
     $fp = fopen("log.html", 'a');
-    fwrite($fp, "<div class='msgln'><i>El usuario ". $_SESSION['name'] ." Abandono el chat.</i><br></div>");
+    fwrite($fp, "<div class='msgln'><i>El usuario ". $user['name'] ." Abandono el chat.</i><br></div>");
     fclose($fp);
 
     session_destroy();

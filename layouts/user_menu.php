@@ -25,10 +25,17 @@
   </a> 
 </li>
 <!--------------------------- CARRITO DE COMPRA ----------------------------------------->
-<!--<li>
-  <a href="media.php" >
+<li>
+  <a href="inicio_carrito_ingles_usuario2.php" >
     <i class="glyphicon glyphicon-shopping-cart"></i>
-    <span>Carrito</span>
+    <span>Shopping cart</span>
   </a>
-</li>-->
+</li>
+<!--------------------------- CARRITO DE COMPRA ----------------------------------------->
+<li>
+  <a href="chat.php" >
+    <i class="glyphicon glyphicon-bullhorn"></i>
+    <span>Chat</span>
+  </a>
+</li>
 </ul>

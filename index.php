@@ -50,28 +50,28 @@
                         <img src="libs/images/porsche-4891966_1920.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="libs/images/comercio-electronico.png" alt="">
-                            <p>Producto Automotriz</p>
+                            <a href="inicio_carrito_español_usuario.php">Producto Automotriz</a>
                         </div>
                     </div>
                     <div class="imagen-port">
                         <img src="libs/images/Pintura-Industrial-1-848x450.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="libs/images/comercio-electronico.png" alt="">
-                            <p>Producto Industrial</p>
+                            <a href="inicio_carrito_español_usuario.php">Producto Industrial</a>
                         </div>
                     </div>
                     <div class="imagen-port">
                         <img src="libs/images/Tipos-de-pinturas-para-madera.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="libs/images/comercio-electronico.png" alt="">
-                            <p>Producto Carpinteria</p>
+                            <a href="inicio_carrito_español_usuario.php">Producto Carpinteria</a>
                         </div>
                     </div>
                     <div class="imagen-port">
                         <img src="libs/images/como-lijar-y-pintar-un-auto-3.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="libs/images/comercio-electronico.png" alt="">
-                            <p>Accesorios</p>
+                            <a href="inicio_carrito_español_usuario.php">Accesorios</a>
                         </div>
                     </div>
                 </div>

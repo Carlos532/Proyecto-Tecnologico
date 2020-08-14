@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Agregar proveedores</title>
+    <title>Idioma</title>
     <link rel="stylesheet" href="libs/css/estilos_idiomas.css">
     <link rel="shortcut icon" href="libs/images/Logo.jpeg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">

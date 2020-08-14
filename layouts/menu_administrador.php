@@ -38,14 +38,14 @@
     </ul>
   </li>
   <!------------------------- CATEGORIAS ------------------------------------->
-  <li>
+  <!--<li>
     <a href="categorias.php" >
       <i class="glyphicon glyphicon-indent-left"></i>
       <span>Categorías</span>
     </a>
-  </li>
+  </li>-->
   <!---------------------------- PRODUCTOS ------------------------------------>
-  <li>
+  <!--<li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-large"></i>
       <span>Productos</span>
@@ -54,15 +54,15 @@
      <li><a href="Productos.php">Administrar productos</a> </li>
      <li><a href="agregar_producto.php">Agregar productos</a> </li>
    </ul>
- </li>
+ </li>-->
  <!--------------------------- MEDIA ----------------------------------------->
- <li>
+ <!--<li>
   <a href="galeria.php" >
     <i class="glyphicon glyphicon-picture"></i>
     <span>Media</span>
   </a>
 </li>
-<li>
+<li>-->
   <!-------------------- CALENDARIO ------------------------------------>
  <li>
     <a href="calendario.php">
@@ -70,6 +70,13 @@
       <span>Calendario</span>
     </a>
   </li>
+  <!--------------------------- CARRITO DE COMPRA ----------------------------------------->
+<li>
+  <a href="inicio_carrito_español_admin.php" >
+    <i class="glyphicon glyphicon-shopping-cart"></i>
+    <span>Carrito</span>
+  </a>
+</li>
 <!--------------------------- CARRITO DE COMPRA ----------------------------------------->
 <li>
   <a href="chat.php" >

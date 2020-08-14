@@ -26,7 +26,7 @@
 </li>
 <!--------------------------- CARRITO DE COMPRA ----------------------------------------->
 <li>
-  <a href="media.php" >
+  <a href="inicio_carrito_español_usuario2.php" >
     <i class="glyphicon glyphicon-shopping-cart"></i>
     <span>Carrito</span>
   </a>
