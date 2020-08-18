@@ -1,9 +1,14 @@
 <?php
-//Incluye el diseño y la base de datos
+  require_once('includes/load.php');//INCLUYE LOAD
+  if (!$session->isUserLoggedIn(true)) { redirect('inicio_sesion.php', false);}//VERIFICA SI LA SESION EXISTE
+  ?>
+<?php
 include 'global/config.php';
 include 'global/conexion.php';
 include 'carrito.php';
 include 'templates/cabecera_español_admin.php';
+
+ 
 ?>
     <br>
     <?php if($mensaje!="") { ?>

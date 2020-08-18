@@ -1,6 +1,6 @@
 <?php
 function eliminar(){
-include ("templates/cabecera_ingles_usuario.php");
+include ("templates/cabecera_español_usuario2.php");
 include ("global/conexion2.php");
 if (isset($_POST['btnEliminar'])){
 $id = $_POST['id'];
@@ -9,8 +9,8 @@ $sql = "DELETE FROM tblproductos WHERE ID = $id";
 if (mysqli_query($conexion, $sql)){
     echo "<script>
 Swal.fire(
-    'Good joob!',
-    'The products delete',
+    '¡Buen trabajo!',
+    'Los productos han sido eliminados',
     'succes'
   )
 </script>
@@ -38,13 +38,13 @@ Swal.fire(
 eliminar();
 ?>
     <center><br/>
-    <form action="proceso_eliminar.php" method="POST">
-    <button name="regresar" type="submit" class="btn btn-warning">To return</button>
+    <form action="proceso_eliminar_español_usuario2.php" method="POST">
+    <button name="regresar" type="submit" class="btn btn-warning">Regresar</button>
     </form>
     </center>
     <?php 
     if(isset($_POST['regresar'])){
-        header('Location: inicio_carrito_ingles_usuario.php');
+        header('Location: inicio_carrito_español_usuario2.php');
     }else{
         echo "";
     }

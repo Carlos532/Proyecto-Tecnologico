@@ -1,8 +1,12 @@
 <?php
+  require_once('includes/load.php');//INCLUYE LOAD
+  if (!$session->isUserLoggedIn(true)) { redirect('inicio_sesion.php', false);}//VERIFICA SI LA SESION EXISTE
+  ?>
+<?php
 include 'global/config.php';
 include 'global/conexion.php';
 include 'carrito.php';
-include 'templates/cabecera_ingles_usuario.php';
+include 'templates/cabecera_español_admin.php';
 ?>
 <?php 
 if($_POST){
@@ -38,13 +42,13 @@ if($_POST){
 } // Ya cuando se ha digitado el correo
 ?>
 <div class="jumbotron text-center">
-    <h1 class="display-4">¡FINAL STEP!</h1>
+    <h1 class="display-4">¡ÚLTIMO PASO!</h1>
     <hr class="my-4">
-    <p class="lead"> You are about to pay PayPal the amount of:
+    <p class="lead"> Estás a punto de pagar a PayPal la cantidad de:
     <h4>$<?php echo number_format($total,2); ?></h4>
     </p>
-    <p>Products will be shipped once payment has benn processed</br>
-    <strong>(For clarifications write to email: jaibitasracing2020@gmail.com)</strong>
+    <p>Los productos se enviarán una vez que se haya procesado el pago</br>
+    <strong>(Para aclaraciones escribir al correo electrónico: jaibitasracing2020@gmail.com)</strong>
     </p>
 </div>
 
@@ -86,7 +90,7 @@ if($_POST){
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     console.log(data);
-                    window.location="verificador.php?";
+                    window.location="verificador_español_admin.php?";
                     // Show a success message to the buyer
                     alert('Transaction completed by ' + details.payer.name.given_name + '!');
                 });

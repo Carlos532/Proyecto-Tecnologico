@@ -1,5 +1,5 @@
 <?php 
-include "templates/cabecera_ingles_usuario.php";
+include "templates/cabecera_español_usuario2.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,10 +7,9 @@ include "templates/cabecera_ingles_usuario.php";
     <script src='https://cdn.jsdelivr.net/npm/sweetalert2@9'></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete</title>
+    <title>Verificador</title>
 </head>
 <body>
-    <br/>
     <br/>
     <br/>
     <br/>
@@ -21,13 +20,13 @@ include "templates/cabecera_ingles_usuario.php";
 <?php 
 ?>
     <center><br/>
-    <form action="proceso_eliminar.php" method="POST">
-    <button name="regresar" type="submit" class="btn btn-warning">To return</button>
+    <form action="proceso_eliminar_español_usuario2.php" method="POST">
+    <button name="regresar" type="submit" class="btn btn-warning">Regresar</button>
     </form>
     </center>
     <?php 
     if(isset($_POST['regresar'])){
-        header('Location: inicio_carrito_ingles_usuario.php');
+        header('Location: inicio_carrito_español_usuario2.php');
     }else{
         echo "";
     }

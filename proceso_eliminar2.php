@@ -1,6 +1,6 @@
 <?php
 function eliminar(){
-include ("templates/cabecera_ingles_admin.php");
+include ("templates/cabecera_español_admin.php");
 include ("global/conexion2.php");
 if (isset($_POST['btnEliminar'])){
 $id = $_POST['id'];
@@ -31,14 +31,13 @@ Swal.fire(
     <script src='https://cdn.jsdelivr.net/npm/sweetalert2@9'></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete</title>
 </head>
 <body>
 <?php 
 eliminar();
 ?>
     <center><br/>
-    <form action="proceso_eliminar.php" method="POST">
+    <form action="proceso_eliminar2.php" method="POST">
     <button name="regresar" type="submit" class="btn btn-warning">Regresar</button>
     </form>
     </center>

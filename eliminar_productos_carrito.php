@@ -1,3 +1,7 @@
+<?php
+  require_once('includes/load.php');//INCLUYE LOAD
+  if (!$session->isUserLoggedIn(true)) { redirect('login_v2.php', false);}//VERIFICA SI LA SESION EXISTE
+  ?>
 <?php 
 include 'templates/cabecera_ingles_admin.php';
 ?>

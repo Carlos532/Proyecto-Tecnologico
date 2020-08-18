@@ -1,4 +1,8 @@
 <?php
+  require_once('includes/load.php');//INCLUYE LOAD
+  if (!$session->isUserLoggedIn(true)) { redirect('login_v2.php', false);}//VERIFICA SI LA SESION EXISTE
+  ?>
+<?php
 //Incluye el diseño y la base de datos
 include 'global/config.php';
 include 'global/conexion.php';

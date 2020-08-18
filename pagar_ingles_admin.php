@@ -1,8 +1,12 @@
 <?php
+  require_once('includes/load.php');//INCLUYE LOAD
+  if (!$session->isUserLoggedIn(true)) { redirect('login_v2.php', false);}//VERIFICA SI LA SESION EXISTE
+  ?>
+<?php
 include 'global/config.php';
 include 'global/conexion.php';
 include 'carrito.php';
-include 'templates/cabecera_ingles_usuario.php';
+include 'templates/cabecera_ingles_admin.php';
 ?>
 <?php 
 if($_POST){
@@ -86,7 +90,7 @@ if($_POST){
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     console.log(data);
-                    window.location="verificador.php?";
+                    window.location="verificador_ingles_admin.php?";
                     // Show a success message to the buyer
                     alert('Transaction completed by ' + details.payer.name.given_name + '!');
                 });

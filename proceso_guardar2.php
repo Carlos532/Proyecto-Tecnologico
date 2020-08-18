@@ -57,7 +57,7 @@ function agregar_productos(){
     agregar_productos();
     ?>
     <center><br/>
-    <form action="proceso_guardar.php" method="POST">
+    <form action="proceso_guardar2.php" method="POST">
     <button name="regresar" type="submit" class="btn btn-warning">Regresar</button>
     </form>
     </center>

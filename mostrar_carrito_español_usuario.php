@@ -12,7 +12,7 @@ include 'templates/cabecera_español_usuario.php';
 <table class="table table-dark table-bordered">
     <tbody>
         <tr>
-            <th width="40%">Descripcion</th>
+            <th width="40%">Descripción</th>
             <th width="15%" class="text-center">Cantidad</th>
             <th width="20%" class="text-center">Precio</th>
             <th width="20%" class="text-center">Total</th>
@@ -27,7 +27,7 @@ include 'templates/cabecera_español_usuario.php';
             <td width="20%" class="text-center">$<?php echo number_format($producto['PRECIO']*$producto['CANTIDAD'],2); ?> </td>
             <form action="" method="POST">
             <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($producto['ID'],COD,KEY) ?>">
-            <td width="5%"> <button class="btn btn-danger" name="btnAccion" value="Eliminar" type="submit">Delete</button> </td>
+            <td width="5%"> <button class="btn btn-danger" name="btnAccion" value="Eliminar" type="submit">Eliminar</button> </td>
             </form>
         </tr>
         <?php $total=$total+($producto['PRECIO']*$producto['CANTIDAD']); //Suma el precio de todos los productos que se han pedido?>
@@ -40,17 +40,17 @@ include 'templates/cabecera_español_usuario.php';
             <tr>
             <?php //Redirecciona a la pagina oficial de paypal a pagar con su usuario y cuenta?>
             <td colspan="5">
-            <form action="pagar.php" method="POST">
+            <form action="pagar_español.php" method="POST">
                 <div class="alert alert-success" role="alert">
                 <div class="form-group">
-                <label for="my-input">Contact email:</label>
+                <label for="my-input">Correo eléctronico de contacto:</label>
                 <input id="email" name="email" class="form-control" type="email" placeholder="example@gmail.com" required>
             </div>
             <small id="emailHelp" class="form-text text-muted">
-                The products will be sent to this email.
+                Los productos se enviarán a este correo electrónico
             </small>
             </div>
-            <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnAccion" value="proceder">Go to pay >></button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnAccion" value="proceder">Ir a pagar >></button>
             </form>
             </td>
             </tr>

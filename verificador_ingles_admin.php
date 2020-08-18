@@ -1,5 +1,9 @@
+<?php
+  require_once('includes/load.php');//INCLUYE LOAD
+  if (!$session->isUserLoggedIn(true)) { redirect('login_v2.php', false);}//VERIFICA SI LA SESION EXISTE
+  ?>
 <?php 
-include "templates/cabecera_ingles_usuario.php";
+include "templates/cabecera_ingles_admin.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,19 +19,19 @@ include "templates/cabecera_ingles_usuario.php";
     <br/>
     <br/>
     <div>
-        <h3>La notificación de Paypal llegara al vendedor.</h3>
-        <p>Este al tanto de su correo electrónico.</p>
+        <h3>The Paypal notification will reach the seller.</h3>
+        <p>Be aware of your email.</p>
     </div>
 <?php 
 ?>
     <center><br/>
-    <form action="proceso_eliminar.php" method="POST">
+    <form action="proceso_eliminar_ingles_admin.php" method="POST">
     <button name="regresar" type="submit" class="btn btn-warning">To return</button>
     </form>
     </center>
     <?php 
     if(isset($_POST['regresar'])){
-        header('Location: inicio_carrito_ingles_usuario.php');
+        header('Location: inicio_carrito_ingles_admin.php');
     }else{
         echo "";
     }

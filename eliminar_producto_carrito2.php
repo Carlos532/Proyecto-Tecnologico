@@ -1,5 +1,9 @@
+<?php
+  require_once('includes/load.php');//INCLUYE LOAD
+  if (!$session->isUserLoggedIn(true)) { redirect('inicio_sesion.php', false);}//VERIFICA SI LA SESION EXISTE
+  ?>
 <?php 
-include 'templates/cabecera_ingles_admin.php';
+include 'templates/cabecera_español_admin.php';
 ?>
 </br></br>
 <form action="proceso_eliminar2.php" method="POST">

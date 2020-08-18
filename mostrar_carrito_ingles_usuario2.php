@@ -1,4 +1,8 @@
 <?php
+  require_once('includes/load.php');//INCLUYE LOAD
+  if (!$session->isUserLoggedIn(true)) { redirect('login_v2.php', false);}//VERIFICA SI LA SESION EXISTE
+  ?>
+<?php
 include 'global/config.php';
 include 'carrito.php';
 include 'templates/cabecera_ingles_usuario2.php';
@@ -40,7 +44,7 @@ include 'templates/cabecera_ingles_usuario2.php';
             <tr>
             <?php //Redirecciona a la pagina oficial de paypal a pagar con su usuario y cuenta?>
             <td colspan="5">
-            <form action="pagar.php" method="POST">
+            <form action="pagar2.php" method="POST">
                 <div class="alert alert-success" role="alert">
                 <div class="form-group">
                 <label for="my-input">Contact email:</label>
