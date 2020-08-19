@@ -32,10 +32,10 @@
   </a>
 </li>
 <!--------------------------- CARRITO DE COMPRA ----------------------------------------->
-<li>
+<!--<li>
   <a href="chat.php" >
     <i class="glyphicon glyphicon-bullhorn"></i>
     <span>Chat</span>
   </a>
-</li>
+</li>-->
 </ul>

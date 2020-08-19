@@ -71,7 +71,7 @@ ob_start();
         </div>
 
         <div class="w-full text-center">
-          <a href="#" class="txt3">
+          <a href="registrar.php" class="txt3">
             Registrarte
           </a>
         </div>
